@@ -4,7 +4,14 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   presets: [require("nativewind/preset")],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "gradient-from": "var(--color-gradient-from)",
+        "gradient-to": "var(--color-gradient-to)",
+        "contrast-text": "var(--color-contrast-text)",
+        contrast: "var(--color-contrast)",
+      },
+    },
   },
   plugins: [],
 };
