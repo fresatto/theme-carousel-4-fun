@@ -1,10 +1,9 @@
 import { Text, View } from "react-native";
-import { themes } from "./themes";
 
-import "../global.css";
-import { LinearGradient } from "expo-linear-gradient";
 import { FullScreenBackground } from "./components/FullScreenBackground";
 import { RoundedCardBackgorund } from "./components/RoundedCardBackground";
+import { themes } from "./themes";
+import "../global.css";
 
 export default function App() {
   return (
