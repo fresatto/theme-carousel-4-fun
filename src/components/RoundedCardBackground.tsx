@@ -7,6 +7,7 @@ type RoundedCardBackgorundProps = LinearGradientProps & {
 export function RoundedCardBackgorund({
   children,
   colors,
+  ...rest
 }: RoundedCardBackgorundProps) {
   return (
     <LinearGradient
@@ -15,14 +16,11 @@ export function RoundedCardBackgorund({
       start={{ x: 0, y: 1 }}
       end={{ x: 1, y: 0 }}
       style={{
-        width: 200,
-        height: 200,
-        alignItems: "center",
-        justifyContent: "center",
         borderWidth: 1,
         borderColor: "#283d4c",
         borderRadius: 24,
       }}
+      {...rest}
     >
       {children}
     </LinearGradient>

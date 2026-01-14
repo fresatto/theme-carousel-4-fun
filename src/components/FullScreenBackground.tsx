@@ -12,7 +12,7 @@ export function FullScreenBackground({
     <LinearGradient
       colors={colors}
       locations={[0.1, 0.7]}
-      style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
+      style={{ flex: 1, justifyContent: "center" }}
     >
       {children}
     </LinearGradient>
