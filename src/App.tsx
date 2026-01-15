@@ -38,7 +38,9 @@ export default function App() {
             paddingHorizontal: (SCREEN_WIDTH - CARD_WIDTH) / 2,
             gap: CARD_SPACING,
           }}
-          renderItem={({ item, index }) => (
+          decelerationRate="fast"
+          snapToInterval={CARD_WIDTH + CARD_SPACING}
+          renderItem={({ item }) => (
             <View
               style={{
                 width: CARD_WIDTH,
