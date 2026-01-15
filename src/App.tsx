@@ -38,6 +38,7 @@ export default function App() {
             data={themeOptions}
             keyExtractor={(item) => item.name}
             bounces={false}
+            scrollEventThrottle={16}
             onViewableItemsChanged={({ changed }) => {
               const visibleItem = changed.find((item) => item.isViewable);
 
