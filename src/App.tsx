@@ -3,11 +3,11 @@ import { StatusBar } from "expo-status-bar";
 import { Dimensions, FlatList, View } from "react-native";
 import { FullScreenBackground } from "./components/FullScreenBackground";
 import { Pagination } from "./components/Pagination";
-import { themes } from "./themes";
+import { AppThemes, themes } from "./themes";
 import { CardTheme } from "./components/CardTheme";
+import { cards } from "./constants/cards";
 
 import "../global.css";
-import { cards } from "./constants/cards";
 
 export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,12 +16,18 @@ export default function App() {
   const CARD_WIDTH = SCREEN_WIDTH * 0.7;
   const CARD_SPACING = 20;
 
-  const currentTheme = currentIndex % 2 === 0 ? "charcoal" : "winter";
+  const appThemesByIndex: Record<number, AppThemes> = {
+    0: "charcoal",
+    1: "winter",
+    2: "night",
+  };
+
+  const currentTheme = appThemesByIndex[currentIndex];
 
   return (
     <View style={themes[currentTheme]} className="flex-1">
       <StatusBar style="light" />
-      <FullScreenBackground colors={["#2a384a", "#111d28"]}>
+      <FullScreenBackground currentAppTheme={currentTheme as AppThemes}>
         <View className="gap-8 items-center">
           <FlatList
             data={cards}
