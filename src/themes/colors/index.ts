@@ -3,12 +3,12 @@ export const colors = {
     primary: "#2a384a",
     secondary: "#111d28",
     contrast: "#283d4c",
-    contrastText: "#ffffff",
+    "contrast-text": "#ffffff",
   },
   winter: {
     primary: "#FF0",
     secondary: "#F00",
     contrast: "#00F",
-    contrastText: "#00F",
+    "contrast-text": "#00F",
   },
 };

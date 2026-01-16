@@ -10,14 +10,17 @@ import "../global.css";
 
 const themeOptions = [
   {
+    theme: "charcoal",
     name: "Charcoal",
     description: "Dark charcoal",
   },
   {
+    theme: "winter",
     name: "Winter",
     description: "Cool light blues",
   },
   {
+    theme: "summer",
     name: "Summer",
     description: "Warm summer colors",
   },
@@ -69,7 +72,7 @@ export default function App() {
                 }}
               >
                 <CardTheme
-                  theme="charcoal"
+                  theme={item.theme}
                   name={item.name}
                   description={item.description}
                 />
