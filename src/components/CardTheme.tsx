@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { ColorValue, Text, View } from "react-native";
 import { AppThemes } from "../themes";
 import { RoundedCardBackgorund } from "./RoundedCardBackground";
 import { tv } from "tailwind-variants";
@@ -30,6 +30,12 @@ const variants = tv({
         name: "text-winter-contrast-text text-3xl font-bold",
         description: "text-winter-contrast-text text-sm",
       },
+      night: {
+        root: "border-night-contrast",
+        headerText: "text-night-contrast-text",
+        name: "text-night-contrast-text text-3xl font-bold",
+        description: "text-night-contrast-text text-sm",
+      },
     },
   },
 });
@@ -37,8 +43,16 @@ const variants = tv({
 export const CardTheme = ({ theme, name, description }: CardThemeProps) => {
   const styles = variants({ theme });
 
+  const gradients: Record<AppThemes, [ColorValue, ColorValue]> = {
+    charcoal: ["#111d28", "#2a384a"],
+    winter: ["#AEC4DF", "#E0E8FC"],
+    night: ["#0B2633", "#224C5C"],
+  };
+
+  const [from, to] = gradients[theme];
+
   return (
-    <RoundedCardBackgorund colors={["#111d28", "#2a384a"]}>
+    <RoundedCardBackgorund colors={[from, to]}>
       <View className={styles.root()}>
         <View className="flex-row items-center justify-between">
           <Text className={styles.headerText()}>01</Text>

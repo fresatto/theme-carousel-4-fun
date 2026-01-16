@@ -6,9 +6,15 @@ export const colors = {
     "contrast-text": "#ffffff",
   },
   winter: {
-    primary: "#FF0",
-    secondary: "#F00",
-    contrast: "#00F",
-    "contrast-text": "#00F",
+    primary: "#E0E8FC",
+    secondary: "#AEC4DF",
+    contrast: "#AEC4DF",
+    "contrast-text": "#000",
+  },
+  night: {
+    primary: "#0B2633",
+    secondary: "#224C5C",
+    contrast: "#283d4c",
+    "contrast-text": "#ffffff",
   },
 };

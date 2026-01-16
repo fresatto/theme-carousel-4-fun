@@ -7,24 +7,7 @@ import { themes } from "./themes";
 import { CardTheme } from "./components/CardTheme";
 
 import "../global.css";
-
-const themeOptions = [
-  {
-    theme: "charcoal",
-    name: "Charcoal",
-    description: "Dark charcoal",
-  },
-  {
-    theme: "winter",
-    name: "Winter",
-    description: "Cool light blues",
-  },
-  {
-    theme: "summer",
-    name: "Summer",
-    description: "Warm summer colors",
-  },
-];
+import { cards } from "./constants/cards";
 
 export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -41,7 +24,7 @@ export default function App() {
       <FullScreenBackground colors={["#2a384a", "#111d28"]}>
         <View className="gap-8 items-center">
           <FlatList
-            data={themeOptions}
+            data={cards}
             keyExtractor={(item) => item.name}
             bounces={false}
             scrollEventThrottle={16}
@@ -79,7 +62,7 @@ export default function App() {
               </View>
             )}
           />
-          <Pagination total={themeOptions.length} current={currentIndex} />
+          <Pagination total={cards.length} current={currentIndex} />
         </View>
       </FullScreenBackground>
     </View>
