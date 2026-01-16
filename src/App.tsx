@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { Dimensions, FlatList, Text, View } from "react-native";
+import { Dimensions, FlatList, View } from "react-native";
 import { FullScreenBackground } from "./components/FullScreenBackground";
-import { RoundedCardBackgorund } from "./components/RoundedCardBackground";
 import { Pagination } from "./components/Pagination";
 import { themes } from "./themes";
+import { CardTheme } from "./components/CardTheme";
+
 import "../global.css";
 
 const themeOptions = [
@@ -67,22 +68,11 @@ export default function App() {
                   height: 280,
                 }}
               >
-                <RoundedCardBackgorund colors={["#111d28", "#2a384a"]}>
-                  <View className="w-full h-full border border-contrast rounded-3xl p-4 justify-between">
-                    <View className="flex-row items-center justify-between">
-                      <Text className="text-contrast">01</Text>
-                      <Text className="text-contrast">Theme 1</Text>
-                    </View>
-                    <View>
-                      <Text className="text-contrast-text text-3xl font-bold">
-                        {item.name}
-                      </Text>
-                      <Text className="text-contrast-text text-sm">
-                        {item.description}
-                      </Text>
-                    </View>
-                  </View>
-                </RoundedCardBackgorund>
+                <CardTheme
+                  theme="charcoal"
+                  name={item.name}
+                  description={item.description}
+                />
               </View>
             )}
           />

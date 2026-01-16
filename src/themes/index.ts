@@ -1,9 +1,9 @@
 import { vars } from "nativewind";
 import { colors } from "./colors";
 
-type Themes = "charcoal" | "winter";
+export type AppThemes = "charcoal" | "winter";
 
-export const themes: Record<Themes, ReturnType<typeof vars>> = {
+export const themes: Record<AppThemes, ReturnType<typeof vars>> = {
   charcoal: vars({
     "--color-gradient-from": colors.charcoal.secondary,
     "--color-gradient-to": colors.charcoal.primary,
