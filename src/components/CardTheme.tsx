@@ -2,6 +2,7 @@ import { ColorValue, Text, View } from "react-native";
 import { AppThemes } from "../themes";
 import { RoundedCardBackgorund } from "./RoundedCardBackground";
 import { tv } from "tailwind-variants";
+import { colors } from "../themes/colors";
 
 type CardThemeProps = {
   theme: AppThemes;
@@ -43,10 +44,12 @@ const variants = tv({
 export const CardTheme = ({ theme, name, description }: CardThemeProps) => {
   const styles = variants({ theme });
 
+  const { charcoal, winter, night } = colors;
+
   const gradients: Record<AppThemes, [ColorValue, ColorValue]> = {
-    charcoal: ["#111d28", "#2a384a"],
-    winter: ["#AEC4DF", "#E0E8FC"],
-    night: ["#0B2633", "#224C5C"],
+    charcoal: [charcoal.primary, charcoal.secondary],
+    winter: [winter.primary, winter.secondary],
+    night: [night.primary, night.secondary],
   };
 
   const [from, to] = gradients[theme];
