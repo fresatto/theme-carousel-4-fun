@@ -1,3 +1,5 @@
+import { colors } from "./src/themes/colors";
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   // NOTE: Update this to include the paths to all files that contain Nativewind classes.
@@ -10,6 +12,7 @@ module.exports = {
         "gradient-to": "var(--color-gradient-to)",
         "contrast-text": "var(--color-contrast-text)",
         contrast: "var(--color-contrast)",
+        ...colors,
       },
     },
   },

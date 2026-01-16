@@ -29,8 +29,10 @@ export default function App() {
   const CARD_WIDTH = SCREEN_WIDTH * 0.7;
   const CARD_SPACING = 20;
 
+  const currentTheme = currentIndex % 2 === 0 ? "charcoal" : "winter";
+
   return (
-    <View style={themes["charcoal"]} className="flex-1">
+    <View style={themes[currentTheme]} className="flex-1">
       <StatusBar style="light" />
       <FullScreenBackground colors={["#2a384a", "#111d28"]}>
         <View className="gap-8 items-center">

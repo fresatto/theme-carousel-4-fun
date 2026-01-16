@@ -1,10 +1,19 @@
 import { vars } from "nativewind";
+import { colors } from "./colors";
 
-export const themes = {
+type Themes = "charcoal" | "winter";
+
+export const themes: Record<Themes, ReturnType<typeof vars>> = {
   charcoal: vars({
-    "--color-gradient-from": "#111d28",
-    "--color-gradient-to": "#2a384a",
-    "--color-contrast": "#283d4c",
-    "--color-contrast-text": "#ffffff",
+    "--color-gradient-from": colors.charcoal.secondary,
+    "--color-gradient-to": colors.charcoal.primary,
+    "--color-contrast": colors.charcoal.contrast,
+    "--color-contrast-text": colors.charcoal.contrastText,
+  }),
+  winter: vars({
+    "--color-gradient-from": colors.winter.primary,
+    "--color-gradient-to": colors.winter.secondary,
+    "--color-contrast": colors.winter.contrast,
+    "--color-contrast-text": colors.winter.contrastText,
   }),
 };
