@@ -1,10 +1,10 @@
-import { LinearGradient, LinearGradientProps } from "expo-linear-gradient";
+import { LinearGradient, LinearGradientProps } from 'expo-linear-gradient'
 
 type RoundedCardBackgorundProps = LinearGradientProps & {
-  children: React.ReactNode;
-};
+  children: React.ReactNode
+}
 
-export function RoundedCardBackgorund({
+export function RoundedCardBackgorund ({
   children,
   colors,
   ...rest
@@ -16,13 +16,11 @@ export function RoundedCardBackgorund({
       start={{ x: 0, y: 1 }}
       end={{ x: 1, y: 0 }}
       style={{
-        borderWidth: 1,
-        borderColor: "#283d4c",
-        borderRadius: 24,
+        borderRadius: 24
       }}
       {...rest}
     >
       {children}
     </LinearGradient>
-  );
+  )
 }

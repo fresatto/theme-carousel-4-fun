@@ -26,7 +26,7 @@ const variants = tv({
         description: 'text-charcoal-contrast-text text-sm'
       },
       winter: {
-        root: 'border-winter-contrast',
+        root: 'border-gray-400',
         headerText: 'text-winter-contrast-text',
         name: 'text-winter-contrast-text text-3xl font-bold',
         description: 'text-winter-contrast-text text-sm'
