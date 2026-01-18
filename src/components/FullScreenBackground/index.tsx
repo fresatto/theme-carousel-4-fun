@@ -19,6 +19,7 @@ export function FullScreenBackground ({
 
   return (
     <AnimatedLinearGradient
+      colors={linearGradientAnimatedProps.colors!}
       animatedProps={linearGradientAnimatedProps}
       locations={[0.1, 0.7]}
       style={{ flex: 1, justifyContent: 'center' }}
