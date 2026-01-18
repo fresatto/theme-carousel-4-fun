@@ -77,12 +77,16 @@ export function Root () {
           />
           <Pagination total={cards.length} current={currentIndex} />
         </View>
-        <TouchableOpacity
-          className='w-full bg-contrast-text p-4 rounded-lg'
-          style={{ paddingBottom: bottom }}
-        >
-          <Text>Set theme</Text>
-        </TouchableOpacity>
+        <View className='absolute bottom-0 left-4 right-4 items-center'>
+          <TouchableOpacity
+            className='w-[300px] bg-contrast-text p-4 rounded-xl'
+            style={{ marginBottom: bottom }}
+          >
+            <Text className='text-center text-lg font-bold text-contrast'>
+              Set theme
+            </Text>
+          </TouchableOpacity>
+        </View>
       </FullScreenBackground>
     </View>
   )
